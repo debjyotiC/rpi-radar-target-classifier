@@ -41,7 +41,7 @@ def range_profile_classifier(range_profile):
     features = [[mean, std, median, iqr, skewness, kurtosis]]
 
     scaler = StandardScaler()
-    scaled_features = scaler.fit_transform(features)
+    scaled_features = scaler.fit_transform(features).astype(np.float32)
 
     interpreter = tf.lite.Interpreter(model_path=model_path)
     interpreter.allocate_tensors()
