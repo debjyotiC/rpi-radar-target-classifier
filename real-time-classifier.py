@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # TO DO: Add your own config file and model path
-configFileName = f"{script_dir}/config_files/xwr16xx_profile_2023_04_18T16_04_15_382.cfg"
+configFileName = f"{script_dir}/config_files/xwr16xx_profile_2024_03_29T16_02_25_112.cfg"
 model_path = f"{script_dir}/model/range-profile-classifier-default.tflite"
 
 class_names = ['tree', 'empty', 'person', 'chair', 'husky', 'spot']
