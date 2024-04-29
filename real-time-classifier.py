@@ -74,8 +74,8 @@ def serialConfig(configFileName):
             Dataport = serial.Serial('/dev/ttyACM1', 921600)
 
             # Windows
-            # CLIport = serial.Serial('COM6', 115200)
-            # Dataport = serial.Serial('COM7', 852272)
+            # CLIport = serial.Serial('COM4', 115200)
+            # Dataport = serial.Serial('COM5', 852272)
 
             port_found = True
 
