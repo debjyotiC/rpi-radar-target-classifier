@@ -8,5 +8,5 @@
 
 # Step 2: Run the real time classifier
 ```bash
-    pyton3 real-time-classifier.py
+    python3 real-time-classifier.py
 ```
