@@ -23,6 +23,7 @@ byteBufferLength = 0
 
 def range_profile_classifier(range_profile):
     range_profile = np.asarray(range_profile)
+    range_profile = 20 * np.log10(range_profile)
 
     # Basic statistics
     mean = np.mean(range_profile)
