@@ -312,14 +312,8 @@ def readAndParseData16xx(Dataport, configParameters):
                 dataOK = 1
 
             elif tlv_type == MMWDEMO_UART_MSG_RANGE_PROFILE:
-
-                # Get the number of bytes to read
-                numBytes = int(2 * configParameters["numRangeBins"])
-                # Convert the raw data to int16 array
-                payload = byteBuffer[idX:idX + numBytes]
-                idX += numBytes
-                rangeProfile = payload.view(dtype=np.float16)
-                # Print the range profile
+                rangeProfile = byteBuffer[idX:idX + (tlv_length - 8)].view(np.uint16)
+                idX += (tlv_length - 8)
                 range_profile_classifier(rangeProfile)
 
             elif tlv_type == MMWDEMO_OUTPUT_MSG_RANGE_DOPPLER_HEAT_MAP:
